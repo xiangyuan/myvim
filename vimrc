@@ -18,13 +18,21 @@ inoremap " ""<LEFT>
 " SuperTab option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
  
-" Disable auto popup, use <Tab> to autocomplete
+" clang_complete settings
+let g:clang_auto_select=1
 let g:clang_complete_auto=0
-" Show clang errors in the quickfix window
 let g:clang_complete_copen=1
-let g:clang_use_library=1
+let g:clang_hl_errors=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
+let g:clang_snippets_engine="clang_complete"
+let g:clang_conceal_snippets=0
+let g:clang_use_library=1
+let g:clang_sort_algo="priority"
+let g:clang_complete_macros=1
+let g:clang_complete_patterns=0
+
+
 " Limit popup menu height
 set pumheight=15
 
