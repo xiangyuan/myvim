@@ -5,6 +5,28 @@ set viminfo='1000,f1,:1000,/1000
 set history=500
 
 au FileType php set omnifunc=phpcomplete#CompletePHP
+ 
+"auto generate the ()patch
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap { {}<LEFT>
+inoremap < <><LEFT>
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
+ 
+
+" SuperTab option for context aware completion
+let g:SuperTabDefaultCompletionType = "context"
+ 
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto=0
+" Show clang errors in the quickfix window
+let g:clang_complete_copen=1
+let g:clang_use_library=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1
+" Limit popup menu height
+set pumheight=15
 
 "------  Visual Options  ------
 set guioptions=egmt         "remove toolbar, scrollbars
